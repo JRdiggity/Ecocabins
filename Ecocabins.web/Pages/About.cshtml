@@ -3,7 +3,105 @@
 @{
     ViewData["Title"] = "About";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<!-- Preloader -->
+<section id="preloader">
+    <div class="loader" id="loader">
+        <div class="loader-img"></div>
+    </div>
+</section>
+<!-- End Preloader -->
+
+<!-- Site Wraper -->
+<div class="wrapper">
+
+    <!-- Header ("header--dark", "header-transparent", "header--sticky")-->
+    <header id="header" class="header header-transparent header--sticky">
+        <!-- Nav Bar -->
+        <nav id="navigation" class="header-nav">
+            <div class="container">
+                <div class="row d-flex flex-md-row align-items-center">
+                    <div class="logo mr-auto">
+                        <!--logo-->
+                        <a href="index.html">
+                            <img class="logo-dark" src="~/images/ecocabinslogo.png" alt="Mazel" />
+                            <img class="logo-light" src="~/images/ecocabinslogo.png" alt="Mazel" />
+                        </a>
+                        <!--End logo-->
+                    </div>
+
+                    <div class="nav-menu ml-auto">
+                        <ul class="">
+                            <li class="nav-menu-item">
+                                <a asp-page="/Index">Home</a>       
+                            </li>
+                            <li class="nav-menu-item">
+                                <a asp-page="/About">About</a>  
+                            </li>
+                            <li class="nav-menu-item mega-menu">
+                                <a asp-page="/Contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Nav Bar -->
+    </header>
+   </div>
+    <!-- End Header -->
+    <!-- CONTENT --------------------------------------------------------------------------------->
+    <!-- Intro Section -->
+    <section class="inner-intro dark-bg bg-image overlay-dark parallax parallax-background1" data-background-img="images/aboutimage.jpg">
+        <div class="container">
+            <div class="row title">
+                <h2 class="h2">About Us</h2>
+                <div class="page-breadcrumb">
+                    <a asp-page="/Index">Home</a>/<span>About</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Intro Section -->
+    <hr />
+    <!-- Team -->
+    <section class="ptb ptb-sm-80">
+        <div class="container text-center">
+            <h3>Meet The Team</h3>
+            <div class="spacer-60"></div>
+            <!--Team Carousel -->
+            <div class="row">
+                <div class="owl-carousel team-carousel nf-carousel-theme">
+
+                    <div class="item">
+                        <div class="team-item nf-col-padding">
+                            <div class="team-item-img">
+                                <img src="~/images/mike.jpg" alt="" />
+                            </div>
+                            <div class="team-item-info">
+                                <h5>Michael Stoner</h5>
+                                <p class="">CEO</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="team-item nf-col-padding">
+                            <div class="team-item-img">
+                                <img src="~/images/jesse.jpg" alt="" />
+                            </div>
+                            <div class="team-item-info">
+                                <h5>Jesse Stoner</h5>
+                                <p class="">Builder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Team Carousel --->
+        </div>
+    </section>
+    <!-- End Team -->       
+    <hr />    
+    <!-- About Section -->
+    <!-- End CONTENT ------------------------------------------------------------------------------>
