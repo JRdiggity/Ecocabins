@@ -11,7 +11,6 @@
     </div>
 </section>
 <!-- End Preloader -->
-
 <!-- Site Wraper -->
 <div class="wrapper">
 
@@ -23,9 +22,9 @@
                 <div class="row d-flex flex-md-row align-items-center">
                     <div class="logo mr-auto">
                         <!--logo-->
-                        <a href="index.html">
-                            <img class="logo-dark" src="~/images/ecocabinslogo.png" alt="Mazel" />
-                            <img class="logo-light" src="~/images/ecocabinslogo.png" alt="Mazel" />
+                        <a asp-page="/Index">
+                            <img class="logo-dark" src="~/images/ecocabinslogocolor.png" alt="Mazel" />
+                            <img class="logo-light" src="~/images/ecocabinslogowhite.png" alt="Mazel" />
                         </a>
                         <!--End logo-->
                     </div>
@@ -33,14 +32,15 @@
                     <div class="nav-menu ml-auto">
                         <ul class="">
                             <li class="nav-menu-item">
-                                <a asp-page="/Index">Home</a>       
+                                <a asp-page="/Index">Home</a>
                             </li>
                             <li class="nav-menu-item">
-                                <a asp-page="/About">About</a>  
+                                <a asp-page="/About">About</a>
                             </li>
                             <li class="nav-menu-item mega-menu">
                                 <a asp-page="/Contact">Contact</a>
                             </li>
+                            <li><a target="_blank" href="https://www.facebook.com/Ecocabins/"><i class="fab fa-facebook-f fa-2x"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -48,60 +48,69 @@
         </nav>
         <!-- End Nav Bar -->
     </header>
-   </div>
-    <!-- End Header -->
-    <!-- CONTENT --------------------------------------------------------------------------------->
-    <!-- Intro Section -->
-    <section class="inner-intro dark-bg bg-image overlay-dark parallax parallax-background1" data-background-img="images/aboutimage.jpg">
-        <div class="container">
-            <div class="row title">
-                <h2 class="h2">About Us</h2>
-                <div class="page-breadcrumb">
-                    <a asp-page="/Index">Home</a>/<span>About</span>
-                </div>
+</div>
+<!-- End Header -->
+<!-- CONTENT --------------------------------------------------------------------------------->
+<!-- Intro Section -->
+<section class="inner-intro dark-bg bg-image overlay-dark parallax parallax-background1" data-background-img="images/frame.png">
+    <div class="container">
+        <div class="row title">
+            <h2 class="h2">About Us</h2>
+            <div class="page-breadcrumb">
+                <a asp-page="/Index">Home</a>/<span>About</span>
             </div>
         </div>
-    </section>
-    <!-- End Intro Section -->
-    <hr />
-    <!-- Team -->
-    <section class="ptb ptb-sm-80">
-        <div class="container text-center">
-            <h3>Meet The Team</h3>
-            <div class="spacer-60"></div>
-            <!--Team Carousel -->
-            <div class="row">
-                <div class="owl-carousel team-carousel nf-carousel-theme">
-
-                    <div class="item">
-                        <div class="team-item nf-col-padding">
-                            <div class="team-item-img">
-                                <img src="~/images/mike.jpg" alt="" />
-                            </div>
-                            <div class="team-item-info">
-                                <h5>Michael Stoner</h5>
-                                <p class="">CEO</p>
+    </div>
+</section>
+<!-- End Intro Section -->
+<hr />
+<!-- Team -->
+<section class="ptb ptb-sm-80">
+    <div class="container text-center">
+        <h3>Meet The Team</h3>
+        <div class="spacer-60"></div>
+        <!--Team Carousel -->
+        <div class="row">
+            <div class="owl-carousel team-carousel nf-carousel-theme">
+                <div class="item">
+                    <div class="team-item nf-col-padding">
+                        <div class="team-item-img">
+                            <img src="~/images/mike.jpg" alt="" />
+                            <div class="team-item-detail">
+                                <div class="team-item-detail-inner light-color">
+                                    <h5>Michael Stoner</h5>
+                                    <p>I have been in the construction businiess for 30 plus years and have worked with numerous companies in the industry.</p>    
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="team-item nf-col-padding">
-                            <div class="team-item-img">
-                                <img src="~/images/jesse.jpg" alt="" />
-                            </div>
-                            <div class="team-item-info">
-                                <h5>Jesse Stoner</h5>
-                                <p class="">Builder</p>
-                            </div>
+                        <div class="team-item-info">
+                            <h5>Michael Stoner</h5>
+                            <p class="">CEO</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--End Team Carousel --->
         </div>
-    </section>
-    <!-- End Team -->       
-    <hr />    
-    <!-- About Section -->
-    <!-- End CONTENT ------------------------------------------------------------------------------>
+        <!--End Team Carousel --->
+    </div>
+</section>
+<!-- End Team -->
+<!--About Section-->
+<section id="about" class="wow fadeIn ptb ptb-sm-80">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-8 offset-md-2">
+                <h3 class="h4">WHO WE ARE</h3>
+                <div class="spacer-15"></div>
+                <p class="lead">We are a local business who is customer oriented and focused on quality. We continue to move forward in the industry and can handle any size job from accents to complete homes.</p>
+            </div>
+        </div>
+        <div class="row mt-80">
+
+        </div>
+    </div>
+</section>
+<!-- End About Section-->
+<hr />
+<!-- About Section -->
+<!-- End CONTENT ------------------------------------------------------------------------------>
