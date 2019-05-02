@@ -11,43 +11,12 @@
     </div>
 </section>
 <!-- End Preloader -->
-<!-- Sidebar Menu -->
-<div class="sidebar-menu">
-    <div class="sidembar-menu-wrap">
-        <a href="javascript:void(0)" class="sidebar-close-icon icon--close">
-            <i class="ion ion-android-close"></i>
-        </a>
-        <!--Sidebar Content-->
-        <div class="sidebar-content">
-            <h5 class="white">Sign In</h5>
-            <form role="search" id="searchform" action="/search" method="get" class="sign-in">
-                <input class="input-sm form-full" type="email" aria-required="true" id="email" name="email" placeholder="Email" value="" />
-                <input class="input-sm form-full" type="password" aria-required="true" id="password" name="password" placeholder="Password" value="" />
-                <input type="submit" class="btn btn-md btn-color-b form-full" value="Sign In" />
-                <a>New Customer?</a>
-            </form>
-            <ul>
-                <li><a class="all-demos-link" target="_blank" href="../demo.html">Main Demo Page</a></li>
-                <li><a href="home.html">Home Default</a></li>
-                <li><a href="portfolio-grid-2col.html">Portfolio</a></li>
-                <li><a href="login-register.html">Login & Signup</a></li>
-                <li><a href="faq-1.html">FAQ</a></li>
-                <li><a href="about-1.html">About</a></li>
-                <li><a href="service-1.html">Service</a></li>
-                <li><a href="blog-grid-3col.html">Blog</a></li>
-                <li><a href="404-error-1.html">404 Error</a></li>
-                <li><a href="shop-checkout.html">Shopping Cart</a></li>
-                <li><a href="contact-1.html">Contact Us</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- End Sidebar Menu -->
-<!-- Site Wraper -->
+
+    <!-- Site Wraper -->
 <div class="wrapper">
 
     <!-- Header ("header--dark", "header-transparent", "header--sticky")-->
-    <header id="header" class="header header-transparent header--sticky">
+    <header id="header" class="header header-transparent header--sticky">   
         <!-- Nav Bar -->
         <nav id="navigation" class="header-nav">
             <div class="container">
@@ -55,10 +24,15 @@
                     <div class="logo mr-auto">
                         <!--logo-->
                         <a asp-page="/Index">
-                            <img class="logo-dark" src="~/images/ecocabinslogocolor.png" alt="Mazel" />
-                            <img class="logo-light" src="~/images/ecocabinslogowhite.png" alt="Mazel" />
+                            <img class="logo-dark" src="~/images/ecocabinslogocolor-min.png" alt="Mazel" />
+                            <img class="logo-light" src="~/images/ecocabinslogowhite-min.png" alt="Mazel" />
                         </a>
                         <!--End logo-->
+                        <div class="nav-icons">
+                            <div class="nav-icon-item d-lg-none">
+                                <span class="nav-icon-trigger menu-mobile-btn align-middle"><i class="ion"></i></span>
+                            </div>
+                        </div>
                     </div>
                     <div class="nav-menu ml-auto">
                         <ul class="">
@@ -79,126 +53,95 @@
         </nav>
         <!-- End Nav Bar -->
     </header>
+
+    <!-- End Header -->
+    <!-- CONTENT --------------------------------------------------------------------------------->
+    <!-- Intro Section -->
+    <section id="intro" class="dark-bg">
+
+        <!-- Hero Slider Section -->
+        <div class="owl-carousel fullwidth-slider white o-flow-hidden">
+            <!--Slide-->
+            <div class="item bg-img slide-bg-image parallax parallax-section1" data-background-img="images/yorkNight-min.png">
+            </div>
+
+            <!--Slide-->
+            <div class="item bg-img slide-bg-image parallax parallax-section1" data-background-img="images/crowestaircase-min.png"></div>
+
+            <!--Slide-->
+            <div class="item bg-img slide-bg-image parallax parallax-section1" data-background-img="images/table-min.png"></div>
+        </div>
+        <!-- End Hero Slider Section -->
+    </section>
+    <!-- End Intro Section -->
+
+    <div class="clearfix"></div>
+
+    <!--About Section-->
+    <section id="about" class="wow fadeIn ptb ptb-sm-80">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3 class="h4">WHY CHOOSE US</h3>
+                    <div class="spacer-15"></div>
+                    <p class="lead">You've dreamed of a timber frame home: a home that represents your personal taste, your love of nature, and your desire for superior quality. Whether you're looking for a classic cottage or a grand statement, <strong>Ecocabins</strong> can create the home you envision. We can work together to deliver on the promise our customers have made to themselves to build their dream home.</p>
+                </div>
+            </div>
+            <div class="row mt-80">
+
+            </div>
+        </div>
+    </section>
+    <!-- End About Section-->
+    <hr />
+    <!-- Service Section -->
+    <section id="service" class="ptb ptb-sm-80">
+        <div class="wow fadeInLeft container text-center">
+            <h3>WHAT WE DO</h3>
+            <div class="spacer-60"></div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-45">
+                    <div class="page-icon-top"><i class="fas fa-home"></i></div>
+                    <h5>Quality</h5>
+                    <p>We respect quality above all else and insist on the best grade lumber available. Our craftsmen and crew oversee every last detail to ensure your home will be authentic and inspiring.</p>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-45">
+                    <div class="page-icon-top"><i class="fas fa-handshake"></i></div>
+                    <h5>Local</h5>
+                    <p>Our timbers are crafted locally, milled and carved by local artisans, and can be raised by the same team of dedicated professionals who worked on it piece by piece.</p>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-45">
+                    <div class="page-icon-top"><i class="fas fa-tree"></i></div>
+                    <h5>Environmentally Friendly</h5>
+                    <p>Our timbers come from well-managed forests and our houses remain among the most environmentally friendly houses available. We understand the importance of building sustainability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Service Section -->
+
+    <hr />
+
+
+    <!-- Client Logos Section -->
+    <section id="client-logos" class="wow fadeIn ptb ptb-sm-80">
+        <div class="container">
+            <div class="owl-carousel client-carousel nf-carousel-theme ">
+                <div class="item">
+                    <div>
+                        <a href="https://midatlantictimberframes.com/">
+                            <img src="~/images/midatltimberlogo-min.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Client Logos Section -->
+    <!-- END CONTENT ---------------------------------------------------------------------------->
+    <!-- Scroll Top -->
+    <a class="scroll-top">
+        <i class="fa fa-angle-double-up"></i>
+    </a>
 </div>
-<!-- End Header -->
-<!-- CONTENT --------------------------------------------------------------------------------->
-
-<!-- Intro Section -->
-<section id="intro" class="dark-bg">
-
-    <!-- Hero Slider Section -->
-    <div class="owl-carousel fullwidth-slider white o-flow-hidden">
-        <!--Slide-->
-        <div class="item bg-img slide-bg-image parallax parallax-section1" data-background-img="images/crowestaircase.png">   
-        </div>
-
-        <!--Slide-->
-        <div class="item bg-img slide-bg-image parallax parallax-section1" data-background-img="images/table.png"></div>
-
-        <!--Slide-->
-        <div class="item bg-img slide-bg-image parallax parallax-section1" data-background-img="images/table.png"></div>
-    </div>
-    <!-- End Hero Slider Section -->
-</section>
-<!-- End Intro Section -->
-
-<div class="clearfix"></div>
-
-<!--About Section-->
-<section id="about" class="wow fadeIn ptb ptb-sm-80">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-8 offset-md-2">
-                <h3 class="h4">WHY CHOOSE US</h3>
-                <div class="spacer-15"></div>
-                <p class="lead">You've dreamed of a timber frame home: a home that represents your personal taste, your love of nature, and your desire for superior quality. Whether you're looking for a classic cottage or a grand statement, <strong>Ecocabins</strong> can create the home you envision. We can work together to deliver on the promise our customers have made to themselves to build their dream home.</p>
-            </div>
-        </div>
-        <div class="row mt-80">
-
-        </div>
-    </div>
-</section>
-<!-- End About Section-->
-<hr />
-<!-- Service Section -->
-<section id="service" class="ptb ptb-sm-80">
-    <div class="wow fadeInLeft container text-center">
-        <h3>WHAT WE DO</h3>
-        <div class="spacer-60"></div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 mb-45">
-                <div class="page-icon-top"><i class="fas fa-home"></i></div>
-                <h5>Quality</h5>
-                <p>We respect quality above all else and insist on the best grade lumber available. Our craftsmen and crew oversee every last detail to ensure your home will be authentic and inspiring.</p>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-45">
-                <div class="page-icon-top"><i class="fas fa-handshake"></i></div>
-                <h5>Local</h5>
-                <p>Our timbers are crafted locally milled and carved by local artisans, and can be raised by the same team of dedicated professionals who worked on it piece by piece.</p>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-45">
-                <div class="page-icon-top"><i class="fas fa-tree"></i></div>
-                <h5>Environmentally Friendly</h5>
-                <p>Our timbers come from well-managed forests and our houses remain among the most environmentally friendly houses available. We understand the importance of building sustainability.</p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Service Section -->
-
-<hr />
-
-<!-- Testimonials -->
-<section id="testimonial" class="overlay-dark80 dark-bg ptb ptb-sm-80" style="background-image: url('img/full/22.jpg');" data-stellar-background-ratio="0.5">
-    <div class="container">
-        <div class="owl-carousel testimonial-carousel nf-carousel-theme white">
-            <div class="item">
-                <div class="testimonial text-center dark-color">
-                    <div class="container-icon"><i class="fa fa-quote-right"></i></div>
-                    <p class="lead">" I got a dummy for Christmas and started teaching myself. I got books and records and sat in front of the practising. I did my first show in the third grade and just kept going. "</p>
-                    <h6 class="quote-author">Jeff Dunham <span style="font-weight: 400;">( Appel Studio )</span></h6>
-                </div>
-            </div>
-            <div class="item">
-                <div class="testimonial text-center dark-color">
-                    <div class="container-icon"><i class="fa fa-quote-right"></i></div>
-                    <p class="lead">" It's true, you can never eat a pet you name. And anyway, I did my first show in the third grade it would be like a ventriloquist eating his dummy. "</p>
-                    <h6 class="quote-author">Alexander Theroux <span style="font-weight: 400;">( USA )</span></h6>
-                </div>
-            </div>
-            <div class="item">
-                <div class="testimonial text-center dark-color">
-                    <div class="container-icon"><i class="fa fa-quote-right"></i></div>
-                    <p class="lead">" We're not leaving here without Buster, man. Leave no crash-test dummy behind! "</p>
-                    <h6 class="quote-author">Adam Savage <span style="font-weight: 400;">( Artist )</span></h6>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Testimonials -->
-
-<hr />
-
-<!-- Client Logos Section -->
-<section id="client-logos" class="wow fadeIn ptb ptb-sm-80">
-    <div class="container">
-        <div class="owl-carousel client-carousel nf-carousel-theme ">
-            <div class="item">
-                <div>
-                    <a href="https://midatlantictimberframes.com/">
-                        <img src="~/images/midatltimberblack.png">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Client Logos Section -->
-<!-- END CONTENT ---------------------------------------------------------------------------->
-<!-- Scroll Top -->
-<a class="scroll-top">
-    <i class="fa fa-angle-double-up"></i>
-</a>
-<!-- End Scroll Top -->
+    <!-- End Scroll Top -->

@@ -3,3 +3,89 @@
     width: 100%;
 }
 
+/* Loading animation */
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modalload {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8) url("http://i.stack.imgur.com/FhHRx.gif") 50% 50% no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading .modalload {
+    overflow: hidden;
+    display: block;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+#mainNav .navbar-brand img {
+    height: 80px;
+}
+
+#contactResult {
+    font-size: 21px;
+    letter-spacing: 4px;
+    line-height: 32px;
+    color: #323232;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#about {
+    background-color: #f7f7f7;
+}
+
+#client-logos {
+    background-color: #f7f7f7;
+}
+.header.header-transparent {
+    position: fixed;
+}
+
+.footer {
+    background-color:white;
+}
+
+#contact {
+    background-color: #f7f7f7;
+}
+
+.scroll-top:hover {
+    background: #28a745;
+    text-decoration: none;
+    color: #fff;
+}
+
+.content-carousel .owl-controls .owl-buttons .owl-prev:hover, .content-carousel .owl-controls .owl-buttons .owl-next:hover, .image-slider .owl-controls .owl-buttons .owl-prev:hover, .image-slider .owl-controls .owl-buttons .owl-next:hover, .fullwidth-slider .owl-controls .owl-buttons .owl-prev:hover, .fullwidth-slider .owl-controls .owl-buttons .owl-next:hover, .nf-carousel-theme .owl-controls .owl-buttons .owl-prev:hover, .nf-carousel-theme .owl-controls .owl-buttons .owl-next:hover {
+    /* background: #fff; */
+    color: #28a745;
+}
+
+a:hover {
+    color: #28a745;
+    text-decoration: none;
+    transition: all 0.25s ease 0s;
+    -moz-transition: all 0.25s ease 0s;
+    -webkit-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+}
+
+h3:after {
+    color: #28a745;
+    content: ".";
+    font-size: 34px;
+}

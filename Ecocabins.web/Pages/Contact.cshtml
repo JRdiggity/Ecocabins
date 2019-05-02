@@ -1,8 +1,13 @@
 ﻿@page
-@model ContactModel
+@model Ecocabins.Web.Pages.ContactModel
 @{
     ViewData["Title"] = "Contact";
 }
+
+@section Head {
+    <script defer type="text/javascript" src="~/js/contact.js"></script>
+}
+
 <!-- Preloader -->
 <section id="preloader">
     <div class="loader" id="loader">
@@ -22,23 +27,27 @@
                     <div class="logo mr-auto">
                         <!--logo-->
                         <a asp-page="/Index">
-                            <img class="logo-dark" src="~/images/ecocabinslogocolor.png" alt="Mazel" />
-                            <img class="logo-light" src="~/images/ecocabinslogowhite.png" alt="Mazel" />
+                            <img class="logo-dark" src="~/images/ecocabinslogocolor-min.png" alt="Mazel" />
+                            <img class="logo-light" src="~/images/ecocabinslogowhite-min.png" alt="Mazel" />
                         </a>
                         <!--End logo-->
+                        <div class="nav-icons">
+                            <div class="nav-icon-item d-lg-none">
+                                <span class="nav-icon-trigger menu-mobile-btn align-middle"><i class="ion"></i></span>
+                            </div>
+                        </div>
                     </div>
-
                     <div class="nav-menu ml-auto">
                         <ul class="">
                             <li class="nav-menu-item">
-                                <a asp-page="/Index">Home</a>
+                                <a href="#">Home</a>
                             </li>
                             <li class="nav-menu-item">
                                 <a asp-page="/About">About</a>
                             </li>
-                            <li class="nav-menu-item mega-menu">
+                            <li class="nav-menu-item">
                                 <a asp-page="/Contact">Contact</a>
-                            </li>                          
+                            </li>
                             <li><a target="_blank" href="https://www.facebook.com/Ecocabins/"><i class="fab fa-facebook-f fa-2x"></i></a></li>
                         </ul>
                     </div>
@@ -47,116 +56,150 @@
         </nav>
         <!-- End Nav Bar -->
     </header>
+    <!-- CONTENT --------------------------------------------------------------------------------->
+    <!-- Intro Section -->
+    <section class="inner-intro dark-bg bg-image parallax parallax-background1" data-background-img="images/contactimage-min.jpg">
+        <div class="container">
+            <div class="row title">
+                <h2 class="h2">Contact Us</h2>
+                <div class="page-breadcrumb">
+                    <a asp-page="/Index">Home</a>/<span>Contact</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Intro Section -->
+    <!-- Contact Section -->
+    <section class="ptb ptb-sm-80" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <h3>Get In Touch</h3>
+                    <p class="lead">Thank you for your interest in EcoCabins. We welcome the chance to answer your questions and hear your comments. </p>
+                </div>
+            </div>
+            <div class="spacer-75"></div>
+            <div class="row">
+                <div class="col-md-6 offset-md-1">
+                    <!-- Contact FORM -->
+                    <form method="post" id="frmContactForm" asp-page-handler="ContactFormSubmit">
+
+                        <div class="form-field-wrapper">
+                            <input type="text" class="form-control" placeholder="Name" asp-for="Name">
+                            <span asp-validation-for="Name" class="help-block text-danger"></span>
+                        </div>
+
+                        <div class="form-field-wrapper">
+                            <input type="text" class="form-control" placeholder="Address" asp-for="Address">
+                            <span asp-validation-for="Address" class="help-block text-danger"></span>
+                        </div>
+
+                        <div class="form-field-wrapper">
+                            <input type="text" class="form-control" placeholder="City" asp-for="City">
+                            <span asp-validation-for="City" class="help-block text-danger"></span>
+                        </div>
+
+                        <div class="form-field-wrapper">
+                            <input type="text" class="form-control" placeholder="State" asp-for="State">
+                            <span asp-validation-for="State" class="help-block text-danger"></span>
+                        </div>
+
+                        <div class="form-field-wrapper">
+                            <input type="text" class="form-control" placeholder="Zip Code" asp-for="Zip">
+                            <span asp-validation-for="Zip" class="help-block text-danger"></span>
+                        </div>
+
+                        <div class="form-field-wrapper">
+                            <input type="email" class="form-control" placeholder="Email" asp-for="Email">
+                            <span asp-validation-for="Email" class="help-block text-danger"></span>
+                        </div>
+
+                        <div class="form-field-wrapper">
+                            <input type="tel" class="form-control" placeholder="Phone Number" asp-for="Phone">
+                            <span asp-validation-for="Phone" class="help-block text-danger"></span>
+                        </div>
+
+                        <div class="form-field-wrapper">
+                            <input type="hidden" class="form-control">
+                            <h6>What is the best way to Contact You?</h6>
+                            <select asp-for="Way">
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                            </select>
+                            <span asp-validation-for="Way" class="help-block text-danger"></span>
+                        </div>
+
+                        <div class="form-field-wrapper">
+                            <input type="text" class="form-control" placeholder="What is the best time to contact you?" asp-for="Time">
+                            <span asp-validation-for="Time" class="help-block text-danger"></span>
+                        </div>
+
+                        <div class="form-field-wrapper">
+                            <input type="hidden" class="form-control">
+                            <h6>When do you plan on building?</h6>
+                            <select asp-for="Plan">
+                                <option value="Immediately"> Immediately</option>
+                                <option value="6-12 Months"> 6-12 Months</option>
+                                <option value="12-18 Months"> 12-18 Months</option>
+                                <option value="18-24 Months"> 18-24 Months</option>
+                                <option value="Not Sure"> Not Sure</option>
+                            </select>
+                            <span asp-validation-for="Plan" class="help-block text-danger"></span>
+                        </div>
+
+                        <div class="form-field-wrapper">
+                            <input type="hidden" class="form-control">
+                            <h6>Do you own the land you want to build on?</h6>
+                            <select asp-for="Land">
+                                <option value="Yes"> Yes</option>
+                                <option value="No"> No</option>
+                            </select>
+                            <span asp-validation-for="Land" class="help-block text-danger"></span>
+                        </div>
+
+                        <div class="form-field-wrapper">
+                            <input type="hidden" class="form-control">
+                            <h6>Do you need financing?</h6>
+                            <select asp-for="Finance">
+                                <option> Yes</option>
+                                <option> No</option>
+                                <option> Not Sure</option>
+                            </select>
+                            <span asp-validation-for="Finance" class="help-block text-danger"></span>
+                        </div>
+
+                        <div class="form-field-wrapper">
+                            <input type="text" class="form-control" placeholder="What is your budget?" asp-for="Budget">
+                            <span asp-validation-for="Budget" class="help-block text-danger"></span>
+                        </div>
+
+
+                        <div class="form-field-wrapper">
+                            <textarea rows="5" class="form-control" placeholder="Questions or Comments" asp-for="Message"></textarea>
+                            <span asp-validation-for="Message" class="help-block text-danger"></span>
+                        </div>
+
+                        <br />
+
+                        <div id="success"></div>
+
+                        <div class="row">
+                            <div class="form-group col-12 justify-content-center">
+                                <button id="btnSubmitContactForm" type="submit" class="btn btn-secondary">Send</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <!-- END Contact FORM -->
+                </div>
+            </div>
+        </div>
+        <div id="contactResult" class="row mt-4 d-flex justify-content-center"></div>
+    </section>
+    <div class="modalload"><!-- Place at bottom of page --></div>
+    <!-- Contact Section -->
+    <a class="scroll-top">
+        <i class="fa fa-angle-double-up"></i>
+    </a>
 </div>
-<!-- End Header -->
-<!-- CONTENT --------------------------------------------------------------------------------->
-<!-- Intro Section -->
-<section class="inner-intro dark-bg bg-image parallax parallax-background1" data-background-img="images/contactimage.jpg">
-    <div class="container">
-        <div class="row title">
-            <h2 class="h2">Contact Us</h2>
-            <div class="page-breadcrumb">
-                <a asp-page="/Index">Home</a>/<span>Contact</span>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Intro Section -->
-<!-- Contact Section -->
-<section class="ptb ptb-sm-80">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2 text-center">
-                <h3>Get In Touch</h3>
-                <p class="lead">Nullam dictum felis eu pede mollis pretium leo eget bibendum sodales augue velit cursus. tellus eget condimentum rhoncus sem quam semper libero.</p>
-            </div>
-        </div>
-        <div class="spacer-75"></div>
-        <div class="row">
-            <div class="col-md-6 offset-md-1">
-                <!-- Contact FORM -->
-                <form class="contact-form" id="contact" role="form">
-
-                    <!-- IF MAIL SENT SUCCESSFULLY -->
-                    <h6 class="successContent">
-                        <i class="fa fa-check left" style="color: #5cb45d;"></i>Your message has been sent successfully.
-                    </h6>
-                    <!-- END IF MAIL SENT SUCCESSFULLY -->
-                    <!-- MAIL SENDING UNSUCCESSFULL -->
-                    <h6 class="errorContent">
-                        <i class="fa fa-exclamation-circle left" style="color: #e1534f;"></i>There was a problem validating the form please check!
-                    </h6>
-                    <!-- END MAIL SENDING UNSUCCESSFULL -->
-
-                    <div class="form-field-wrapper">
-                        <input class="input-sm form-full" id="form-email" type="text" name="form-email" placeholder="Name" required>
-                    </div>
-
-                    <div class="form-field-wrapper">
-                        <input class="input-sm form-full" id="form-email" type="email" name="form-email" placeholder="Address" required>
-                    </div>
-
-                    <div class="form-field-wrapper">
-                        <input class="input-sm form-full" id="form-subject" type="text" name="form-subject" placeholder="City">
-                    </div>
-                    <div class="form-field-wrapper">
-                        <input class="input-sm form-full" id="form-email" type="email" name="form-email" placeholder="State" required>
-                    </div>
-                    <div class="form-field-wrapper">
-                        <input class="input-sm form-full" id="form-email" type="email" name="form-email" placeholder="Zip Code" required>
-                    </div>
-
-                    <div class="form-field-wrapper">
-                        <input class="input-sm form-full" id="form-email" type="email" name="form-email" placeholder="Email" required>
-                    </div>
-                    <div class="form-field-wrapper">
-                        <input class="input-sm form-full" id="form-email" type="email" name="form-email" placeholder="Phone Number" required>
-                    </div>
-                    <div class="form-field-wrapper">
-                        <h6>What is the best way to contact you?</h6>
-                        <select>
-                            <option> Email</option>
-                            <option> Phone</option>
-                        </select>
-
-                    </div>
-                    <div class="form-field-wrapper">
-                        <input class="input-sm form-full" id="form-email" type="email" name="form-email" placeholder="What is the best time to contact you?" required>
-                    </div>
-                    <div class="form-field-wrapper">
-                        <h6>When do you play on building?</h6>
-                        <select>
-                            <option> Immediately</option>
-                            <option> 6-12 Months</option>
-                            <option> 12-18 Months</option>
-                            <option> 18-24 Months</option>
-                            <option> Not Sure</option>
-                        </select>
-                    </div>
-                    <div class="form-field-wrapper">
-                        <h6>Do you own the land you want to build on?</h6>
-                        <select>
-                            <option> Yes</option>
-                            <option> No</option>
-                        </select>
-                    </div>
-                    <div class="form-field-wrapper">
-                        <h6>Do need financing?</h6>
-                        <select>
-                            <option> Yes</option>
-                            <option> No</option>
-                            <option> Not Sure</option>
-                        </select>
-                    </div>
-                    <div class="form-field-wrapper">
-                        <input class="input-sm form-full" id="form-email" type="email" name="form-email" placeholder="Do you know what your budget is for this project?" required>
-                    </div>
-                   
-                    <button class="btn btn-md btn-black form-full" type="submit" id="form-submit" name="submit">Send Message</button>
-                </form>
-                <!-- END Contact FORM -->
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Contact Section -->
