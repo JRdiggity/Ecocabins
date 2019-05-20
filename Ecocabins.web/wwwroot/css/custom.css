@@ -65,18 +65,18 @@ body.loading .modalload {
 }
 
 .scroll-top:hover {
-    background: #28a745;
+    background: #228B22;
     text-decoration: none;
     color: #fff;
 }
 
 .content-carousel .owl-controls .owl-buttons .owl-prev:hover, .content-carousel .owl-controls .owl-buttons .owl-next:hover, .image-slider .owl-controls .owl-buttons .owl-prev:hover, .image-slider .owl-controls .owl-buttons .owl-next:hover, .fullwidth-slider .owl-controls .owl-buttons .owl-prev:hover, .fullwidth-slider .owl-controls .owl-buttons .owl-next:hover, .nf-carousel-theme .owl-controls .owl-buttons .owl-prev:hover, .nf-carousel-theme .owl-controls .owl-buttons .owl-next:hover {
     /* background: #fff; */
-    color: #28a745;
+    color: #228B22;
 }
 
 a:hover {
-    color: #28a745;
+    color: #228B22;
     text-decoration: none;
     transition: all 0.25s ease 0s;
     -moz-transition: all 0.25s ease 0s;
@@ -85,7 +85,7 @@ a:hover {
 }
 
 h3:after {
-    color: #28a745;
+    color: #228B22;
     content: ".";
     font-size: 34px;
 }

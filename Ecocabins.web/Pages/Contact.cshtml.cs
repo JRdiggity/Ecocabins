@@ -100,7 +100,7 @@ namespace Ecocabins.Web.Pages
                                 <table>
                                 <tr>
                                     <td>
-                                        <strong>Name</strong>
+                                        <strong>Name:</strong>
                                     </td>
                                     <td>
                                         {Name}
@@ -108,7 +108,7 @@ namespace Ecocabins.Web.Pages
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Address</strong>
+                                        <strong>Address:</strong>
                                     </td>
                                     <td>
                                         {Address}
@@ -116,7 +116,7 @@ namespace Ecocabins.Web.Pages
                                 </tr>                      
                                 <tr>
                                     <td>
-                                        <strong>City</strong>
+                                        <strong>City:</strong>
                                     </td>
                                     <td>
                                         {City}
@@ -124,7 +124,7 @@ namespace Ecocabins.Web.Pages
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>State</strong>
+                                        <strong>State:</strong>
                                     </td>
                                     <td>
                                         {State}
@@ -132,7 +132,7 @@ namespace Ecocabins.Web.Pages
                                 </tr>
                                     <tr>
                                     <td>
-                                        <strong>Zip Code</strong>
+                                        <strong>Zip Code:</strong>
                                     </td>
                                     <td>
                                         {Zip}
@@ -140,7 +140,7 @@ namespace Ecocabins.Web.Pages
                                 </tr>
                                  <tr>
                                     <td>
-                                        <strong>Email</strong>
+                                        <strong>Email:</strong>
                                     </td>
                                     <td>
                                        <a href='mailto:{Email}'>{Email}</a>
@@ -148,7 +148,7 @@ namespace Ecocabins.Web.Pages
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Phone</strong>
+                                        <strong>Phone:</strong>
                                     </td>
                                     <td>
                                         {Phone}
@@ -156,7 +156,7 @@ namespace Ecocabins.Web.Pages
                                 </tr> 
                                 <tr>
                                     <td>
-                                        <strong>Best way to contact</strong>
+                                        <strong>Best way to contact:</strong>
                                     </td>
                                     <td>
                                         {Way}
@@ -164,7 +164,7 @@ namespace Ecocabins.Web.Pages
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Best time to contact</strong>
+                                        <strong>Best time to contact:</strong>
                                     </td>
                                     <td>
                                         {Time}
@@ -172,7 +172,7 @@ namespace Ecocabins.Web.Pages
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Building timeframe</strong>
+                                        <strong>Building timeframe:</strong>
                                     </td>
                                     <td>
                                         {Plan}
@@ -180,7 +180,7 @@ namespace Ecocabins.Web.Pages
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Land owned</strong>
+                                        <strong>Land owned:</strong>
                                     </td>
                                     <td>
                                         {Land}
@@ -188,7 +188,7 @@ namespace Ecocabins.Web.Pages
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Financing</strong>
+                                        <strong>Financing:</strong>
                                     </td>
                                     <td>
                                         {Finance}
@@ -196,7 +196,7 @@ namespace Ecocabins.Web.Pages
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Budget</strong>
+                                        <strong>Budget:</strong>
                                     </td>
                                     <td>
                                         {Budget}
@@ -204,14 +204,12 @@ namespace Ecocabins.Web.Pages
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Message</strong>
+                                        <strong>Message:</strong>
                                     </td>
                                     <td>
                                         {Message}
                                     </td>
-                                </tr>
-
-            
+                                </tr>            
                             </table>";
 
                 smtpClient.Send(mail);
