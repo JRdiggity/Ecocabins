@@ -1,4 +1,4 @@
-﻿.logo a img{
+﻿.logo a img {
     height: 100%;
     width: 100%;
 }
@@ -89,3 +89,29 @@ h3:after {
     content: ".";
     font-size: 34px;
 }
+
+
+.imageDiv {
+    width: 1000px;
+    height: 500px;
+    background-color: transparent;
+    padding: 50px;
+}
+
+.header .logo img.logo-dark {
+    height: 61px;
+    margin-top: -20px;
+}
+
+@media (max-width: 767px) {
+    .header .logo img.logo-dark {
+        height: 40px;
+        margin-top: 0px;
+    }
+}
+
+.ion {
+    font-size: 50px;
+}
+
+ 

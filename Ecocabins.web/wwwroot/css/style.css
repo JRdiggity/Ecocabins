@@ -1249,8 +1249,8 @@ form label.error {
     .logo a {
         position: relative;
         display: block;
-        height: 21px;
-        width: 140px;
+        height: 61px;
+        width: 250px;
         transition: all .3s ease-out;
         -moz-transition: all .3s ease-out;
         -o-transition: all .3s ease-out;
@@ -1264,8 +1264,7 @@ form label.error {
     }
 
         .logo a img {
-            position: absolute;
-            max-height: 100%;
+            position: absolute;            
             height: 100%;
             width: auto;
             transition: all .3s ease-out;
