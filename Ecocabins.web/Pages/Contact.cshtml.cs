@@ -52,24 +52,19 @@ namespace Ecocabins.Web.Pages
         public string Time { get; set; }
  
         [BindProperty]
-        [Required]
         public string Plan { get; set; }
 
         [BindProperty]
-        [Required]
         public string Land { get; set; }
 
         [BindProperty]
-        [Required]
         public string Finance { get; set; }
 
         [BindProperty]
-        [Required]
         public string Budget { get; set; }
 
 
         [BindProperty]
-        [Required]
         public string Message { get; set; }
 
 
