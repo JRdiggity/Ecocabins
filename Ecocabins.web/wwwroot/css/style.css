@@ -4475,8 +4475,7 @@ ul.project-detail-block, .project-detail-block ul {
         text-align: center;
     }
 
-        #preloader .loader .loader-img {
-            background: url("../img/loading.GIF");
+        #preloader .loader .loader-img {            
             width: 60px;
             height: 60px;
             display: block;

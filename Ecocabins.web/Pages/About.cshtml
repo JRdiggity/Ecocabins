@@ -4,6 +4,12 @@
     ViewData["Title"] = "About";
 }
 
+@section Head {
+    <script defer src="js/plugin/jquery.stellar.min.js" type="text/javascript"></script>
+    <script defer src="js/plugin/wow.min.js" type="text/javascript"></script>
+    <script defer src="js/plugin/owl.carousel.min.js" type="text/javascript"></script>
+}
+
 <!-- Preloader -->
 <section id="preloader">
     <div class="loader" id="loader">
@@ -23,8 +29,8 @@
                     <div class="logo mr-auto">
                         <!--logo-->
                         <a asp-page="/Index">
-                            <img class="logo-dark" src="~/images/ecoNoShadow.png" alt="Mazel" />
-                            <img class="logo-light" src="~/images/ecoNoShadowWhite.png" alt="Mazel" />
+                            <img class="logo-dark" src="~/images/ecoNoShadow-min.png" alt="Mazel" />
+                            <img class="logo-light" src="~/images/ecoNoShadowWhite-min.png" alt="Mazel" />
                         </a>
                         <!--End logo-->
                         <div class="nav-icons">

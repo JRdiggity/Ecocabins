@@ -1,5 +1,4 @@
 
-
 $(function () {
     "use strict";
 
@@ -698,36 +697,36 @@ $(function () {
     function pluginElement() {
 
         // Media Player Elements
-        videoElement();
-        function videoElement() {
-            $('.video').mediaelementplayer({
-                loop: true,
-                enableKeyboard: false,
-                iPadUseNativeControls: false,
-                pauseOtherPlayers: false,
-                iPhoneUseNativeControls: false,
-                AndroidUseNativeControls: false,
-                enableAutosize: true
-            });
-            $('.bg-video').mediaelementplayer({
-                loop: true,
-                enableKeyboard: false,
-                iPadUseNativeControls: false,
-                pauseOtherPlayers: false,
-                iPhoneUseNativeControls: false,
-                AndroidUseNativeControls: false,
-                enableAutosize: true,
-                alwaysShowControls: false,
-            });
+        //videoElement();
+        //function videoElement() {
+        //    $('.video').mediaelementplayer({
+        //        loop: true,
+        //        enableKeyboard: false,
+        //        iPadUseNativeControls: false,
+        //        pauseOtherPlayers: false,
+        //        iPhoneUseNativeControls: false,
+        //        AndroidUseNativeControls: false,
+        //        enableAutosize: true
+        //    });
+        //    $('.bg-video').mediaelementplayer({
+        //        loop: true,
+        //        enableKeyboard: false,
+        //        iPadUseNativeControls: false,
+        //        pauseOtherPlayers: false,
+        //        iPhoneUseNativeControls: false,
+        //        AndroidUseNativeControls: false,
+        //        enableAutosize: true,
+        //        alwaysShowControls: false,
+        //    });
 
-            $('.audio').mediaelementplayer({
-                audioWidth: '100%',
-                pauseOtherPlayers: false,
-            });
-        };
+        //    $('.audio').mediaelementplayer({
+        //        audioWidth: '100%',
+        //        pauseOtherPlayers: false,
+        //    });
+        //};
 
         // Responsive Media Elements
-        $(".video, .audio, .post-media, .post-media iframe").fitVids();
+        //$(".video, .audio, .post-media, .post-media iframe").fitVids();
 
 
 
@@ -743,57 +742,55 @@ $(function () {
         // Gria Element
 
         // ISOTOPE MASONRY ELEMENT  ||--------------
-        var $container = $('.container-masonry');
-        $container.imagesLoaded(function () {
-            $container.isotope({
-                itemSelector: '.nf-item',
-                layoutMode: 'masonry',
-                masonry: {
-                    columnWidth: 0,
-                    gutter: 0
-                },
-            });
-        });
+        //var $container = $('.container-masonry');
+        //$container.imagesLoaded(function () {
+        //    $container.isotope({
+        //        itemSelector: '.nf-item',
+        //        layoutMode: 'masonry',
+        //        masonry: {
+        //            columnWidth: 0,
+        //            gutter: 0
+        //        },
+        //    });
+        //});
 
         // bind filter button click
-        $('.container-filter').on('click', '.categories', function () {
-            var filterValue = $(this).attr('data-filter');
-            $container.isotope({ filter: filterValue });
-        });
+        //$('.container-filter').on('click', '.categories', function () {
+        //    var filterValue = $(this).attr('data-filter');
+        //    $container.isotope({ filter: filterValue });
+        //});
 
         // ISOTOPE GRID ELEMENT  ||--------------
-        var $container2 = $('.container-grid');
-        $container2.imagesLoaded(function () {
-            $container2.isotope({
-                itemSelector: '.nf-item',
-                layoutMode: 'fitRows'
-            });
-        });
+        //var $container2 = $('.container-grid');
+        //$container2.imagesLoaded(function () {
+        //    $container2.isotope({
+        //        itemSelector: '.nf-item',
+        //        layoutMode: 'fitRows'
+        //    });
+        //});
 
         // bind filter categories click
-        $('.container-filter').on('click', '.categories', function () {
-            var filterValue = $(this).attr('data-filter');
-            $container2.isotope({ filter: filterValue });
-        });
+        //$('.container-filter').on('click', '.categories', function () {
+        //    var filterValue = $(this).attr('data-filter');
+        //    $container2.isotope({ filter: filterValue });
+        //});
 
         // change active class on categories
-        $('.categories-filter').each(function (i, buttonGroup) {
-            var $buttonGroup = $(buttonGroup);
-            $buttonGroup.on('click', '.categories', function () {
-                $buttonGroup.find('.active').removeClass('active');
-                $(this).addClass('active');
-            });
-
-        });
+        //$('.categories-filter').each(function (i, buttonGroup) {
+        //    var $buttonGroup = $(buttonGroup);
+        //    $buttonGroup.on('click', '.categories', function () {
+        //        $buttonGroup.find('.active').removeClass('active');
+        //        $(this).addClass('active');
+        //    });
+        //});
 
 
         // Masonry Element
-        var container = $('.masonry');
-        container.masonry({
-            // columnWidth: 0,
-            itemSelector: '.nf-item'
-        });
-
+        //var container = $('.masonry');
+        //container.masonry({
+        //    // columnWidth: 0,
+        //    itemSelector: '.nf-item'
+        //});
     };
 
     // ---------------------------------------------------------------------------------------------------------------------------->
@@ -801,12 +798,12 @@ $(function () {
     // ---------------------------------------------------------------------------------------------------------------------------->
     function scrollCallbackEle() {
         //scroll Callback Element
-        $('.load-ele-fade').viewportChecker({
-            classToAdd: 'visible animated fadeIn',
-            offset: 100,
-            callbackFunction: function (elem, action) {
-            }
-        });
+        //$('.load-ele-fade').viewportChecker({
+        //    classToAdd: 'visible animated fadeIn',
+        //    offset: 100,
+        //    callbackFunction: function (elem, action) {
+        //    }
+        //});
 
         $(function () {
 
@@ -890,22 +887,22 @@ $(function () {
     function shortcodeElements() {
 
         // Portfolio Lightbox Popup Elements
-        lightbox();
-        function lightbox() {
-            $(".cbox-gallary1").colorbox({
-                rel: 'gallary',
-                maxWidth: "95%",
-                maxHeight: "95%"
+        //lightbox();
+        //function lightbox() {
+        //    $(".cbox-gallary1").colorbox({
+        //        rel: 'gallary',
+        //        maxWidth: "95%",
+        //        maxHeight: "95%"
 
-            });
-            $(".cbox-iframe").colorbox({
-                iframe: true,
-                maxWidth: "95%",
-                maxHeight: "95%",
-                innerWidth: 640,
-                innerHeight: 390
-            });
-        };
+        //    });
+        //    $(".cbox-iframe").colorbox({
+        //        iframe: true,
+        //        maxWidth: "95%",
+        //        maxHeight: "95%",
+        //        innerWidth: 640,
+        //        innerHeight: 390
+        //    });
+        //};
 
         // Skills Progressbar Elements
         skillsProgressBar();
@@ -918,7 +915,7 @@ $(function () {
         };
 
         // Tooltip
-        $(".tipped").tipper();
+        //$(".tipped").tipper();
 
         //Counter
         $('.counter').each(function () {

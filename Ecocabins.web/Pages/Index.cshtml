@@ -3,6 +3,21 @@
 @{
     ViewData["Title"] = "Home page";
 }
+@section Head {
+    <script defer src="js/plugin/jquery.stellar.min.js" type="text/javascript"></script>
+    <script defer src="js/plugin/wow.min.js" type="text/javascript"></script>
+    <script defer src="js/plugin/owl.carousel.min.js" type="text/javascript"></script>
+
+    @*<script defer src="js/plugin/jquery.flexslider.js" type="text/javascript"></script>*@
+    @*<script defer src="js/plugin/jquery.viewportchecker.js" type="text/javascript"></script>*@
+    @*<script defer src="js/plugin/imagesloaded.pkgd.min.js" type="text/javascript"></script>*@
+    @*<script defer src="js/plugin/jquery.fitvids.js" type="text/javascript"></script>*@
+    @*<script defer src="js/plugin/jquery.colorbox-min.js" type="text/javascript"></script>*@
+    @*<script defer src="js/plugin/isotope.pkgd.min.js" type="text/javascript"></script>*@
+    @*<script defer src="js/plugin/masonry.pkgd.min.js" type="text/javascript"></script>*@
+    @*<script defer src="js/plugin/jquery.fs.tipper.min.js" type="text/javascript"></script>*@
+    @*<script defer src="js/plugin/mediaelement-and-player.min.js"></script>*@
+}
 
 <!-- Preloader -->
 <section id="preloader">
@@ -11,8 +26,7 @@
     </div>
 </section>
 <!-- End Preloader -->
-
-    <!-- Site Wraper -->
+<!-- Site Wraper -->
 <div class="wrapper">
 
     <!-- Header ("header--dark", "header-transparent", "header--sticky")-->
@@ -24,8 +38,8 @@
                     <div class="mr-auto logo">
                         <!--logo-->
                         <a asp-page="/Index">
-                            <img class="logo-dark" src="~/images/ecoNoShadow.png" alt="Mazel" />
-                            <img class="logo-light" src="~/images/ecoNoShadowWhite.png" alt="Mazel" />
+                            <img class="logo-dark" src="~/images/ecoNoShadow-min.png" alt="Mazel" />
+                            <img class="logo-light" src="~/images/ecoNoShadowWhite-min.png" alt="Mazel" />
                         </a>
                         <!--End logo-->
                         <div class="nav-icons">
@@ -131,15 +145,15 @@
                 <div class="owl-carousel client-carousel nf-carousel-theme ">
                     <div class="item">
                         <div>
-                            <a href="https://midatlantictimberframes.com/">
+                            <a href="https://midatlantictimberframes.com/" target="_blank">
                                 <img src="~/images/midatltimberlogo-min.png">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-</section>
+        </div>
+    </section>
     <!-- End Client Logos Section -->
     <!-- END CONTENT ---------------------------------------------------------------------------->
     <!-- Scroll Top -->
@@ -147,4 +161,4 @@
         <i class="fa fa-angle-double-up"></i>
     </a>
 </div>
-    <!-- End Scroll Top -->
+<!-- End Scroll Top -->

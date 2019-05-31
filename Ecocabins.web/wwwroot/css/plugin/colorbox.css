@@ -25,8 +25,7 @@
     #cboxContent{margin-top:32px; overflow:visible; background:rgba(0,0,0,0);}
         .cboxIframe{background:#fff;}
         #cboxError{padding:50px; border:1px solid #ccc;}
-        #cboxLoadedContent{background:rgba(0,0,0,0); padding:1px;}
-        #cboxLoadingGraphic{background:url(../../img/loading.GIF) no-repeat center center;}
+        #cboxLoadedContent{background:rgba(0,0,0,0); padding:1px;}       
         #cboxLoadingOverlay{background:rgba(0,0,0,0);}
         #cboxTitle{position:absolute; top:-22px; left:0; color:#323232; font-weight:600;}
         #cboxCurrent{position:absolute; top:-22px; right:205px; text-indent:-9999px;}

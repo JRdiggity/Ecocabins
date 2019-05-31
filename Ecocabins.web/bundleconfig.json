@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "wwwroot/js/theme.min.js",
+    "inputFiles": [
+      "wwwroot/js/theme.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/contact.min.js",
+    "inputFiles": [
+      "wwwroot/js/contact.js"
+    ]
+  }
+]
