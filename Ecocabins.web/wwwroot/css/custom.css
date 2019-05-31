@@ -114,6 +114,7 @@ h3:after {
 
 .ion {
     font-size: 50px;
+    color: white;
 }
 
 .header.header-transparent .nav-menu > ul > li > a {
@@ -137,4 +138,6 @@ h3:after {
     background-color: #f7f7f7;
 }
 
-
+.header.header-transparent .nav-icons > *:hover {
+    color: white;
+}
