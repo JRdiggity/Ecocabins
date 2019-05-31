@@ -43,6 +43,7 @@ body.loading .modalload {
     font-weight: 600;
     margin-top: 0px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 #about {
@@ -131,3 +132,9 @@ h3:after {
     margin-right: auto;
     max-width: 1920px;
 }
+
+.footer .copyright {
+    background-color: #f7f7f7;
+}
+
+
