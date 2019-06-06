@@ -140,3 +140,8 @@ h3:after {
 .header.header-transparent .nav-icons > *:hover {
     color: white;
 }
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    padding: 10px;
+}
