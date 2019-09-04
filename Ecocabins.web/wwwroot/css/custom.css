@@ -145,3 +145,11 @@ h3:after {
     cursor: pointer;
     padding: 10px;
 }
+
+.fa-envelope{
+    margin-right: 10px;
+}
+
+.fa-phone {
+    margin-right: 10px;
+}

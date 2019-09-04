@@ -21,4 +21,5 @@ namespace Ecocabins.web
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
     }
+
 }

@@ -49,13 +49,12 @@ namespace Ecocabins.web
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();               
+                app.UseDeveloperExceptionPage();
             }
             else
             {
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
-                app.UseWebMarkupMin();
             }
 
             app.UseHttpsRedirection();

@@ -10,6 +10,9 @@
     <script defer src="js/plugin/wow.min.js" type="text/javascript"></script>
     <script defer src="js/plugin/owl.carousel.min.js" type="text/javascript"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptcha&render=explicit" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 }
 
 <!-- Preloader -->
@@ -31,8 +34,8 @@
                     <div class="logo mr-auto">
                         <!--logo-->
                         <a asp-page="/Index">
-                            <img class="logo-dark" src="~/images/ecoNoShadow-min.png" alt="Mazel" />
-                            <img class="logo-light" src="~/images/ecoNoShadowWhite-min.png" alt="Mazel" />
+                            <img class="logo-dark" src="~/images/ecoNoShadow-min.png" alt="Logo Dark" />
+                            <img class="logo-light" src="~/images/ecoNoShadowWhite-min.png" alt="Logo Light" />
                         </a>
                         <!--End logo-->
                         <div class="nav-icons">
@@ -85,6 +88,19 @@
             <div class="spacer-75"></div>
             <div class="row">
                 <div class="col-md-6 offset-md-1">
+                    <!--Honeypot-->
+                    <style>
+                        .ohnohoney {
+                            opacity: 0;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 0;
+                            width: 0;
+                            z-index: -1;
+                        }
+                    </style>
+
                     <!-- Contact FORM -->
                     <form method="post" id="frmContactForm" asp-page-handler="ContactFormSubmit">
 
@@ -176,26 +192,17 @@
                             <input type="text" class="form-control" placeholder="What is your budget?" asp-for="Budget">
                             <span asp-validation-for="Budget" class="help-block text-danger"></span>
                         </div>
-
-
                         <div class="form-field-wrapper">
                             <textarea rows="5" class="form-control" placeholder="Questions or Comments" asp-for="Message"></textarea>
                             <span asp-validation-for="Message" class="help-block text-danger"></span>
                         </div>
-
+                        <!--Recaptcha-->
+                        <div class="g-recaptcha" data-sitekey="6Lcuh6cUAAAAAMRGTUMofDBYGzGQvDtEp5MtWXvL"></div>
                         <br />
-
                         <div id="success"></div>
-
                         <div class="row">
-                            <div class="form-group col-12 justify-content-center">
-                                <div class="g-recaptcha" data-sitekey="6Lcuh6cUAAAAAMRGTUMofDBYGzGQvDtEp5MtWXvL"></div>
-                                <br />
-                                <button id="btnSubmitContactForm" type="submit" class="btn btn-secondary">Send</button>
-                            </div>
+                            <button type="submit" id="btnSubmitContactForm" class="btn">Submit</button>
                         </div>
-
-
                     </form>
                     <!-- END Contact FORM -->
                 </div>
@@ -206,6 +213,6 @@
     <div class="modalload"><!-- Place at bottom of page --></div>
     <!-- Contact Section -->
     <a class="scroll-top">
-        <i class="fa fa-angle-double-up"></i>
+        <i class="fas fa-angle-double-up"></i>
     </a>
 </div>

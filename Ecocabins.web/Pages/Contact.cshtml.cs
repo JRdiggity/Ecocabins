@@ -1,19 +1,19 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
+using System.Net.Http;
 using System.Net.Mail;
-using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
+using Newtonsoft.Json;
 
 namespace Ecocabins.Web.Pages
 {
     public class ContactModel : PageModel
     {
         public void OnGet() { }
-
         [BindProperty]
         [Required]
         public string Name { get; set; }
@@ -50,7 +50,7 @@ namespace Ecocabins.Web.Pages
         [BindProperty]
         [Required]
         public string Time { get; set; }
- 
+
         [BindProperty]
         public string Plan { get; set; }
 
@@ -63,27 +63,42 @@ namespace Ecocabins.Web.Pages
         [BindProperty]
         public string Budget { get; set; }
 
-
         [BindProperty]
         public string Message { get; set; }
 
+        [Required(AllowEmptyStrings = false)]
+        [BindProperty(Name = "g-recaptcha-response")]
+        public string GoogleReCaptchaResponse { get; set; }
 
-  
-
-        public JsonResult OnPostContactFormSubmit()
+        public async Task<JsonResult> OnPostContactFormSubmit()
         {
             try
             {
-                var mail = new MailMessage(
-                new MailAddress("josh.hill@outlook.es", "Joshua Hill"), // Needs to change to site's actual domain
-                new MailAddress("josh.hill@outlook.es", "Josh Hill")); // Change to Sarah's dad
-                mail.IsBodyHtml = true;
+                // If recaptcha is not provided, or model state is invalid, throw exception (return false for JS submit)
+                if (string.IsNullOrEmpty(GoogleReCaptchaResponse) || !ModelState.IsValid)
+                    throw new Exception();
 
-                SmtpClient smtpClient = new SmtpClient("smtp-mail.outlook.com")
+                // Validate recaptcha
+                var recaptchaIsValid = await RecaptchaIsValid(GoogleReCaptchaResponse);
+
+                if(!recaptchaIsValid)
+                    throw new Exception();
+
+                // All checks succeeded, send email
+                // TODO: Needs to change to site's actual domain
+                var mail = new MailMessage(
+                    from: new MailAddress("sales@ecocabins.biz", "Website Submission"),
+                    to: new MailAddress("sales@ecocabins.biz", "Ecocabins Sales")
+                    )
+                {
+                    IsBodyHtml = true
+                }; // Change to Sarah's dad
+
+                SmtpClient smtpClient = new SmtpClient("outlook.office365.com")
                 {
                     UseDefaultCredentials = false,
                     DeliveryMethod = SmtpDeliveryMethod.Network,
-                    Credentials = new NetworkCredential("josh.hill@outlook.es", "83x1LIXsIcH7"),
+                    Credentials = new NetworkCredential("sales@ecocabins.biz", "TCLH1992ecocabins"),
                     Port = 587,
                     EnableSsl = true
                 };
@@ -214,6 +229,14 @@ namespace Ecocabins.Web.Pages
             {
                 return new JsonResult(false);
             }
+        }
+
+        private async Task<bool> RecaptchaIsValid(string googleReCaptchaResponse)
+        {
+            var reCaptchaSecret = "6Lcuh6cUAAAAANxh74oyTkGZgc5OWVy_emITkpGa";
+            var httpResponse = await new HttpClient().GetAsync($"https://www.google.com/recaptcha/api/siteverify?secret={reCaptchaSecret}&response={googleReCaptchaResponse}");
+
+            return httpResponse.StatusCode == HttpStatusCode.OK;
         }
     }
 }
