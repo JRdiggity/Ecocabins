@@ -87,18 +87,18 @@ namespace Ecocabins.Web.Pages
                 // All checks succeeded, send email
                 // TODO: Needs to change to site's actual domain
                 var mail = new MailMessage(
-                    from: new MailAddress("sales@ecocabins.biz", "Website Submission"),
-                    to: new MailAddress("sales@ecocabins.biz", "Ecocabins Sales")
+                    from: new MailAddress("ecocabinscontactform@gmail.com", "Website Submission"),
+                    to: new MailAddress("mikesemail6734@gmail.com", "Ecocabins Sales")
                     )
                 {
                     IsBodyHtml = true
-                }; // Change to Sarah's dad
+                };
 
-                SmtpClient smtpClient = new SmtpClient("outlook.office365.com")
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
                 {
                     UseDefaultCredentials = false,
                     DeliveryMethod = SmtpDeliveryMethod.Network,
-                    Credentials = new NetworkCredential("sales@ecocabins.biz", "TCLH1992ecocabins"),
+                    Credentials = new NetworkCredential("ecocabinscontactform@gmail.com", "&57j35XEO%mr"),
                     Port = 587,
                     EnableSsl = true
                 };
